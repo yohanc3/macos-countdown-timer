@@ -6,3 +6,19 @@
 //
 
 import Foundation
+import SwiftUI
+
+
+struct ClockHeader: View{
+    
+    @Binding var currentClock: ClockType?;
+    
+    var body: some View {
+        HStack(spacing: 20){
+            if var currentClock = self.currentClock, !currentClock.isCountOver{
+                Text("Current timer name: \(currentClock.name)")
+                
+            }
+        }
+    }
+}

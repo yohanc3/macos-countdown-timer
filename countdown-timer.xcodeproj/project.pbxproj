@@ -7,19 +7,56 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1081E2712B6EBA180005D3E9 /* countdown_timerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1081E2702B6EBA180005D3E9 /* countdown_timerApp.swift */; };
-		1081E2732B6EBA180005D3E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1081E2722B6EBA180005D3E9 /* ContentView.swift */; };
+		1005F05E2B855CF3001632FC /* ClockToTextConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1005F05D2B855CF3001632FC /* ClockToTextConverter.swift */; };
+		1005F0682B871D15001632FC /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1005F0672B871D15001632FC /* Home.swift */; };
+		1005F06A2B871EE7001632FC /* 14-Segment-LED-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1005F0692B871EE7001632FC /* 14-Segment-LED-Regular.ttf */; };
+		1005F06C2B8A4B1A001632FC /* DurationInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1005F06B2B8A4B1A001632FC /* DurationInputView.swift */; };
+		1005F06E2B8B2BC1001632FC /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1005F06D2B8B2BC1001632FC /* DatePicker.swift */; };
 		1081E2752B6EBA1A0005D3E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1081E2742B6EBA1A0005D3E9 /* Assets.xcassets */; };
 		1081E2782B6EBA1A0005D3E9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1081E2772B6EBA1A0005D3E9 /* Preview Assets.xcassets */; };
+		1081E28C2B6EBB440005D3E9 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1081E2802B6EBB430005D3E9 /* Sidebar.swift */; };
+		1081E28D2B6EBB440005D3E9 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1081E2812B6EBB430005D3E9 /* UserSettings.swift */; };
+		1081E28E2B6EBB440005D3E9 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1081E2822B6EBB430005D3E9 /* NavBar.swift */; };
+		1081E28F2B6EBB440005D3E9 /* Configurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1081E2832B6EBB430005D3E9 /* Configurations.swift */; };
+		1081E2902B6EBB440005D3E9 /* ClocksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1081E2842B6EBB430005D3E9 /* ClocksList.swift */; };
+		1081E2922B6EBB440005D3E9 /* countdown_clockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1081E2862B6EBB430005D3E9 /* countdown_clockApp.swift */; };
+		1081E2942B6EBB440005D3E9 /* HomeWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1081E2882B6EBB440005D3E9 /* HomeWrapper.swift */; };
+		1081E2962B6EBB440005D3E9 /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1081E28A2B6EBB440005D3E9 /* Clock.swift */; };
+		1081E2972B6EBB440005D3E9 /* ClockListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1081E28B2B6EBB440005D3E9 /* ClockListManager.swift */; };
+		1081E2992B6ED20D0005D3E9 /* ClockInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1081E2982B6ED20C0005D3E9 /* ClockInputView.swift */; };
+		1081E29B2B7075400005D3E9 /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1081E29A2B7075400005D3E9 /* Stopwatch.swift */; };
+		1081E29D2B72748E0005D3E9 /* ClockDeleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1081E29C2B72748E0005D3E9 /* ClockDeleteView.swift */; };
+		1081E29F2B753BD40005D3E9 /* ClockEditAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1081E29E2B753BD40005D3E9 /* ClockEditAddView.swift */; };
+		1081E2A12B7D121C0005D3E9 /* ClockHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1081E2A02B7D121C0005D3E9 /* ClockHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1005F05D2B855CF3001632FC /* ClockToTextConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockToTextConverter.swift; sourceTree = "<group>"; };
+		1005F0602B8715A4001632FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1005F0612B871650001632FC /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
+		1005F0672B871D15001632FC /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		1005F0692B871EE7001632FC /* 14-Segment-LED-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "14-Segment-LED-Regular.ttf"; sourceTree = "<group>"; };
+		1005F06B2B8A4B1A001632FC /* DurationInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationInputView.swift; sourceTree = "<group>"; };
+		1005F06D2B8B2BC1001632FC /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
 		1081E26D2B6EBA180005D3E9 /* countdown-timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "countdown-timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1081E2702B6EBA180005D3E9 /* countdown_timerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = countdown_timerApp.swift; sourceTree = "<group>"; };
-		1081E2722B6EBA180005D3E9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1081E2742B6EBA1A0005D3E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1081E2772B6EBA1A0005D3E9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1081E2792B6EBA1A0005D3E9 /* countdown_timer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = countdown_timer.entitlements; sourceTree = "<group>"; };
+		1081E27F2B6EBB430005D3E9 /* countdown-timer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "countdown-timer-Bridging-Header.h"; sourceTree = "<group>"; };
+		1081E2802B6EBB430005D3E9 /* Sidebar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sidebar.swift; path = "../todo-list/countdown-clock/Sidebar.swift"; sourceTree = "<group>"; };
+		1081E2812B6EBB430005D3E9 /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSettings.swift; path = "../todo-list/countdown-clock/UserSettings.swift"; sourceTree = "<group>"; };
+		1081E2822B6EBB430005D3E9 /* NavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavBar.swift; path = "../todo-list/countdown-clock/NavBar.swift"; sourceTree = "<group>"; };
+		1081E2832B6EBB430005D3E9 /* Configurations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Configurations.swift; path = "../todo-list/countdown-clock/Configurations.swift"; sourceTree = "<group>"; };
+		1081E2842B6EBB430005D3E9 /* ClocksList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClocksList.swift; path = "../todo-list/countdown-clock/ClocksList.swift"; sourceTree = "<group>"; };
+		1081E2862B6EBB430005D3E9 /* countdown_clockApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = countdown_clockApp.swift; path = "../todo-list/countdown-clock/countdown_clockApp.swift"; sourceTree = "<group>"; };
+		1081E2882B6EBB440005D3E9 /* HomeWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeWrapper.swift; path = "../todo-list/countdown-clock/HomeWrapper.swift"; sourceTree = "<group>"; };
+		1081E28A2B6EBB440005D3E9 /* Clock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Clock.swift; path = "../todo-list/countdown-clock/Clock.swift"; sourceTree = "<group>"; };
+		1081E28B2B6EBB440005D3E9 /* ClockListManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClockListManager.swift; path = "../todo-list/countdown-clock/ClockListManager.swift"; sourceTree = "<group>"; };
+		1081E2982B6ED20C0005D3E9 /* ClockInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockInputView.swift; sourceTree = "<group>"; };
+		1081E29A2B7075400005D3E9 /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
+		1081E29C2B72748E0005D3E9 /* ClockDeleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockDeleteView.swift; sourceTree = "<group>"; };
+		1081E29E2B753BD40005D3E9 /* ClockEditAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockEditAddView.swift; sourceTree = "<group>"; };
+		1081E2A02B7D121C0005D3E9 /* ClockHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,11 +70,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1005F0622B871727001632FC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1005F0692B871EE7001632FC /* 14-Segment-LED-Regular.ttf */,
+				1005F0612B871650001632FC /* digital-7.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		1081E2642B6EBA180005D3E9 = {
 			isa = PBXGroup;
 			children = (
+				1005F06D2B8B2BC1001632FC /* DatePicker.swift */,
+				1005F06B2B8A4B1A001632FC /* DurationInputView.swift */,
+				1005F0672B871D15001632FC /* Home.swift */,
+				1005F05D2B855CF3001632FC /* ClockToTextConverter.swift */,
+				1081E2A02B7D121C0005D3E9 /* ClockHeader.swift */,
+				1081E29E2B753BD40005D3E9 /* ClockEditAddView.swift */,
+				1081E29C2B72748E0005D3E9 /* ClockDeleteView.swift */,
+				1081E29A2B7075400005D3E9 /* Stopwatch.swift */,
+				1081E2982B6ED20C0005D3E9 /* ClockInputView.swift */,
+				1081E28A2B6EBB440005D3E9 /* Clock.swift */,
+				1081E28B2B6EBB440005D3E9 /* ClockListManager.swift */,
+				1081E2842B6EBB430005D3E9 /* ClocksList.swift */,
+				1081E2832B6EBB430005D3E9 /* Configurations.swift */,
+				1081E2862B6EBB430005D3E9 /* countdown_clockApp.swift */,
+				1081E2822B6EBB430005D3E9 /* NavBar.swift */,
+				1081E2882B6EBB440005D3E9 /* HomeWrapper.swift */,
+				1081E2802B6EBB430005D3E9 /* Sidebar.swift */,
+				1081E2812B6EBB430005D3E9 /* UserSettings.swift */,
 				1081E26F2B6EBA180005D3E9 /* countdown-timer */,
 				1081E26E2B6EBA180005D3E9 /* Products */,
+				1081E27F2B6EBB430005D3E9 /* countdown-timer-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,8 +117,8 @@
 		1081E26F2B6EBA180005D3E9 /* countdown-timer */ = {
 			isa = PBXGroup;
 			children = (
-				1081E2702B6EBA180005D3E9 /* countdown_timerApp.swift */,
-				1081E2722B6EBA180005D3E9 /* ContentView.swift */,
+				1005F0622B871727001632FC /* Fonts */,
+				1005F0602B8715A4001632FC /* Info.plist */,
 				1081E2742B6EBA1A0005D3E9 /* Assets.xcassets */,
 				1081E2792B6EBA1A0005D3E9 /* countdown_timer.entitlements */,
 				1081E2762B6EBA1A0005D3E9 /* Preview Content */,
@@ -101,6 +166,7 @@
 				TargetAttributes = {
 					1081E26C2B6EBA180005D3E9 = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
 					};
 				};
 			};
@@ -129,6 +195,7 @@
 			files = (
 				1081E2782B6EBA1A0005D3E9 /* Preview Assets.xcassets in Resources */,
 				1081E2752B6EBA1A0005D3E9 /* Assets.xcassets in Resources */,
+				1005F06A2B871EE7001632FC /* 14-Segment-LED-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +206,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1081E2732B6EBA180005D3E9 /* ContentView.swift in Sources */,
-				1081E2712B6EBA180005D3E9 /* countdown_timerApp.swift in Sources */,
+				1081E2972B6EBB440005D3E9 /* ClockListManager.swift in Sources */,
+				1005F05E2B855CF3001632FC /* ClockToTextConverter.swift in Sources */,
+				1005F06C2B8A4B1A001632FC /* DurationInputView.swift in Sources */,
+				1081E28C2B6EBB440005D3E9 /* Sidebar.swift in Sources */,
+				1081E2992B6ED20D0005D3E9 /* ClockInputView.swift in Sources */,
+				1081E2922B6EBB440005D3E9 /* countdown_clockApp.swift in Sources */,
+				1081E28D2B6EBB440005D3E9 /* UserSettings.swift in Sources */,
+				1081E29D2B72748E0005D3E9 /* ClockDeleteView.swift in Sources */,
+				1081E2A12B7D121C0005D3E9 /* ClockHeader.swift in Sources */,
+				1081E2902B6EBB440005D3E9 /* ClocksList.swift in Sources */,
+				1081E28F2B6EBB440005D3E9 /* Configurations.swift in Sources */,
+				1081E29B2B7075400005D3E9 /* Stopwatch.swift in Sources */,
+				1081E28E2B6EBB440005D3E9 /* NavBar.swift in Sources */,
+				1081E2942B6EBB440005D3E9 /* HomeWrapper.swift in Sources */,
+				1081E2962B6EBB440005D3E9 /* Clock.swift in Sources */,
+				1005F0682B871D15001632FC /* Home.swift in Sources */,
+				1081E29F2B753BD40005D3E9 /* ClockEditAddView.swift in Sources */,
+				1005F06E2B8B2BC1001632FC /* DatePicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +353,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "countdown-timer/countdown_timer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -277,6 +361,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"countdown-timer/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "countdown-timer/Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -286,6 +371,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "learning.countdown-timer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "countdown-timer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -295,6 +382,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "countdown-timer/countdown_timer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -302,6 +390,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"countdown-timer/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "countdown-timer/Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -311,6 +400,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "learning.countdown-timer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "countdown-timer-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

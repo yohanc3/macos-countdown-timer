@@ -8,13 +8,15 @@
 import Foundation
 import SwiftUI
 
-struct ClockEditView: View {
+struct ClockEditAddView: View {
     
     @State var newClockName: String = "";
     
     @Binding var currentClockName: String;
-    @Binding var isEditSheetPresented: Bool;
-    var editClock: (String, Int) -> Void;
+    @Binding var isSheetPresented: Bool;
+    @Binding var isEdit: Bool;
+    
+    var editAddClock: (String, Int) -> Void;
     
     @State private var clockDays: String = "";
     @State private var clockHours: String = "";
@@ -32,15 +34,15 @@ struct ClockEditView: View {
         VStack{
             
             HStack(){
-                Text("\(currentClockName)")
+                Text("\( isEdit ? currentClockName : "Add new clock")")
                     .foregroundStyle(.white)
                     .font(.largeTitle)
             }
-            .padding(EdgeInsets(top: 30, leading: 0, bottom: 30, trailing: 0))
+                .padding(EdgeInsets(top: 30, leading: 0, bottom: 30, trailing: 0))
             
             HStack{
                 
-                TextField("New clock name", text: $newClockName)
+                TextField(isEdit ? "New clock name" : "Clock name", text: $newClockName)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(width: 300)
                 
@@ -50,8 +52,6 @@ struct ClockEditView: View {
                 }
                 .pickerStyle(MenuPickerStyle())
                 .fixedSize()
-                
-                
                 
                 }
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
@@ -75,7 +75,7 @@ struct ClockEditView: View {
             }
             
             HStack{
-                Button("Edit Clock"){
+                Button(isEdit ? "Edit clock" : "Add clock"){
                 
                     var newRemainingTime = 0;
                     
@@ -86,7 +86,7 @@ struct ClockEditView: View {
                         
                         let clockHoursInt = Int(clockHours) ?? 0;
                         let remainingHoursInSec = (clockHoursInt * 60 * 60);
-                        
+                
                         let clockMinutesInt = Int(clockMinutes) ?? 0;
                         let remainingMinutesInSec = (clockMinutesInt * 60)
                         
@@ -102,14 +102,15 @@ struct ClockEditView: View {
                         
                     }
                     
-                    editClock(newClockName, newRemainingTime);
-                    isEditSheetPresented = false;
+                    editAddClock(newClockName, newRemainingTime);
+                    isSheetPresented = false;
+
                 }
                 
                 Spacer()
                 
                 Button("Exit"){
-                    isEditSheetPresented = false;
+                    isSheetPresented = false;
                 }
             }
             }

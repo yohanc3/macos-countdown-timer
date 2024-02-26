@@ -18,7 +18,7 @@ struct ClockInputView: View {
     @State private var clockMinutes: Int = 0;
     @State private var clockSeconds: Int = 0;
     
-    var addClock: (ClockType) -> Void;
+    var addClock: (Clock) -> Void;
     
     var body: some View {
         VStack{
@@ -42,7 +42,7 @@ struct ClockInputView: View {
             HStack{
                 Button("Create Clock"){
                     let totalSeconds = (clockDays * 24 * 60 * 60) + (clockHours * 60 * 60) + (clockMinutes * 60) + clockSeconds
-                    let newClock: ClockType = Clock(name: clockName, durationInSeconds: totalSeconds)
+                    let newClock: Clock = Clock(name: clockName, durationInSeconds: totalSeconds)
                     addClock(newClock)
                     isCreateSheetPresented = false;
                 }

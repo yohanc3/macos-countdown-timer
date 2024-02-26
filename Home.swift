@@ -9,8 +9,8 @@ import SwiftUI
 
 struct Home: View {
     
-    @Binding var currentClock: ClockType?;
-    @Binding var currentClockId: Int;
+    @Binding var currentClock: Clock?;
+    @Binding var currentClockId: String;
     @Binding var clockListID: UUID;
     
     @State var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()

@@ -7,7 +7,7 @@ class ClockToTextConverter: TimeConverter {
     var MINUTE = 60.0;
     
     var remainingTime: Double = 0;
-    var clock: ClockType;
+    var clock: Clock;
     
     var seconds: Int = 0;
     var minutes: Int = 0;
@@ -16,7 +16,7 @@ class ClockToTextConverter: TimeConverter {
     
     var formattedTime: String = "00:00:00:00";
     
-    init(clock: ClockType){
+    init(clock: Clock){
         self.clock = clock;
         self.remainingTime = Double(clock.remainingTime);
         setFormattedTime();

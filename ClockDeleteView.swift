@@ -7,17 +7,22 @@
 
 import Foundation
 import SwiftUI
+import SwiftData
 
 struct ClockDeleteView: View {
+    
+    @Environment(\.modelContext) var context
     
     @State var deleteConfirmation: String = "";
     @State var deleteConfirmationBool: Bool = false;
     
-    @Binding var currentClock: ClockType?;
+    @Binding var currentClock: Clock?;
     @Binding var currentClockName: String;
     @Binding var isDeleteSheetPresented: Bool;
     
-    var deleteClock: (ClockType) -> Void;
+    @Query var clocks: [Clock]
+    
+    var deleteClock: (Clock) -> Void;
     
     var body: some View {
         

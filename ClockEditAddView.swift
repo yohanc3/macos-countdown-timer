@@ -7,10 +7,11 @@
 
 import Foundation
 import SwiftUI
+import SwiftData
 
 struct ClockEditAddView: View {
     
-    @State var newClockName: String = "";
+    @Bindable var clock: Clock
     
     @Binding var currentClockName: String;
     @Binding var isSheetPresented: Bool;
@@ -23,13 +24,12 @@ struct ClockEditAddView: View {
     @State private var clockMinutes: String = "";
     @State private var clockSeconds: String = "";
     
+    @State var newClockName: String = "";
     @State var isDurationInputSelected = true;
-    
     @State var selectedDate = Date();
     @State var selectedTime = Date();
     
     var body: some View {
-        
         
         VStack{
             
@@ -42,7 +42,7 @@ struct ClockEditAddView: View {
             
             HStack{
                 
-                TextField(isEdit ? "New clock name" : "Clock name", text: $newClockName)
+                TextField("Clock name", text: isEdit ? $clock.name : $newClockName)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(width: 300)
                 
@@ -57,19 +57,15 @@ struct ClockEditAddView: View {
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
             
             if isDurationInputSelected {
-                // Duration input view
+                
                 DurationInputView(clockDays: self.$clockDays, clockHours: self.$clockHours, clockMinutes: self.$clockMinutes, clockSeconds: self.$clockSeconds)
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 30, trailing: 0))
             } else {
-                // Date selection view
                 
                 HStack{
                     MyDatePicker(selection: $selectedDate)
                         .padding()
                         .fixedSize()
-//                    DatePicker("Select Time", selection: $selectedTime, displayedComponents: .hourAndMinute)
-//                        .padding()
-//                        .labelsHidden()
                 }
                 
             }
@@ -95,8 +91,6 @@ struct ClockEditAddView: View {
                         newRemainingTime = remainingDaysInSec + remainingHoursInSec + remainingMinutesInSec + remainingSecs;
                         
                     } else {
-                        
-//                        let selectedDateTime = Calendar.current.date(bySettingHour: Calendar.current.component(.hour, from: selectedTime), minute: Calendar.current.component(.minute, from: selectedTime), second: 0, of: selectedDate) ?? selectedDate;
                         
                         newRemainingTime = Int(selectedDate.timeIntervalSinceNow)
                         

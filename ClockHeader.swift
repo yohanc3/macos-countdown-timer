@@ -11,7 +11,7 @@ import SwiftUI
 
 struct ClockHeader: View{
     
-    @Binding var currentClock: ClockType?;
+    @Binding var currentClock: Clock?;
     
     var body: some View {
         HStack(spacing: 20){

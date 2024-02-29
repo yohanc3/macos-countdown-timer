@@ -13,17 +13,17 @@
 		1005F06C2B8A4B1A001632FC /* DurationInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1005F06B2B8A4B1A001632FC /* DurationInputView.swift */; };
 		1005F06E2B8B2BC1001632FC /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1005F06D2B8B2BC1001632FC /* DatePicker.swift */; };
 		1018A8C12B8FD8DE00204A83 /* AlertSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1018A8C02B8FD8DE00204A83 /* AlertSheet.swift */; };
+		1018A8C52B9106BF00204A83 /* HomeWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1018A8C42B9106BF00204A83 /* HomeWrapper.swift */; };
+		1018A8CB2B9106D200204A83 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1018A8CA2B9106D200204A83 /* NavBar.swift */; };
+		1018A8D12B9106D900204A83 /* ClockListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1018A8D02B9106D900204A83 /* ClockListManager.swift */; };
+		1018A8D32B9106DC00204A83 /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1018A8D22B9106DC00204A83 /* Clock.swift */; };
+		1018A8DD2B9106F900204A83 /* ClocksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1018A8DC2B9106F900204A83 /* ClocksList.swift */; };
+		1018A8DF2B9106FB00204A83 /* Configurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1018A8DE2B9106FB00204A83 /* Configurations.swift */; };
+		1018A8E12B9106FD00204A83 /* countdown_clockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1018A8E02B9106FC00204A83 /* countdown_clockApp.swift */; };
+		1018A8E52B9107CB00204A83 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1018A8E42B9107CB00204A83 /* Sidebar.swift */; };
+		1018A8E72B9107D600204A83 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1018A8E62B9107D600204A83 /* UserSettings.swift */; };
 		1081E2752B6EBA1A0005D3E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1081E2742B6EBA1A0005D3E9 /* Assets.xcassets */; };
 		1081E2782B6EBA1A0005D3E9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1081E2772B6EBA1A0005D3E9 /* Preview Assets.xcassets */; };
-		1081E28C2B6EBB440005D3E9 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1081E2802B6EBB430005D3E9 /* Sidebar.swift */; };
-		1081E28D2B6EBB440005D3E9 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1081E2812B6EBB430005D3E9 /* UserSettings.swift */; };
-		1081E28E2B6EBB440005D3E9 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1081E2822B6EBB430005D3E9 /* NavBar.swift */; };
-		1081E28F2B6EBB440005D3E9 /* Configurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1081E2832B6EBB430005D3E9 /* Configurations.swift */; };
-		1081E2902B6EBB440005D3E9 /* ClocksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1081E2842B6EBB430005D3E9 /* ClocksList.swift */; };
-		1081E2922B6EBB440005D3E9 /* countdown_clockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1081E2862B6EBB430005D3E9 /* countdown_clockApp.swift */; };
-		1081E2942B6EBB440005D3E9 /* HomeWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1081E2882B6EBB440005D3E9 /* HomeWrapper.swift */; };
-		1081E2962B6EBB440005D3E9 /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1081E28A2B6EBB440005D3E9 /* Clock.swift */; };
-		1081E2972B6EBB440005D3E9 /* ClockListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1081E28B2B6EBB440005D3E9 /* ClockListManager.swift */; };
 		1081E2992B6ED20D0005D3E9 /* ClockInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1081E2982B6ED20C0005D3E9 /* ClockInputView.swift */; };
 		1081E29B2B7075400005D3E9 /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1081E29A2B7075400005D3E9 /* Stopwatch.swift */; };
 		1081E29D2B72748E0005D3E9 /* ClockDeleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1081E29C2B72748E0005D3E9 /* ClockDeleteView.swift */; };
@@ -40,20 +40,20 @@
 		1005F06B2B8A4B1A001632FC /* DurationInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationInputView.swift; sourceTree = "<group>"; };
 		1005F06D2B8B2BC1001632FC /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
 		1018A8C02B8FD8DE00204A83 /* AlertSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSheet.swift; sourceTree = "<group>"; };
+		1018A8C42B9106BF00204A83 /* HomeWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWrapper.swift; sourceTree = "<group>"; };
+		1018A8CA2B9106D200204A83 /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
+		1018A8D02B9106D900204A83 /* ClockListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockListManager.swift; sourceTree = "<group>"; };
+		1018A8D22B9106DC00204A83 /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
+		1018A8DC2B9106F900204A83 /* ClocksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClocksList.swift; sourceTree = "<group>"; };
+		1018A8DE2B9106FB00204A83 /* Configurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Configurations.swift; path = "../../todo-list/countdown-clock/Configurations.swift"; sourceTree = "<group>"; };
+		1018A8E02B9106FC00204A83 /* countdown_clockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = countdown_clockApp.swift; path = "../../todo-list/countdown-clock/countdown_clockApp.swift"; sourceTree = "<group>"; };
+		1018A8E42B9107CB00204A83 /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
+		1018A8E62B9107D600204A83 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserSettings.swift; path = "../../todo-list/countdown-clock/UserSettings.swift"; sourceTree = "<group>"; };
 		1081E26D2B6EBA180005D3E9 /* countdown-timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "countdown-timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1081E2742B6EBA1A0005D3E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1081E2772B6EBA1A0005D3E9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1081E2792B6EBA1A0005D3E9 /* countdown_timer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = countdown_timer.entitlements; sourceTree = "<group>"; };
 		1081E27F2B6EBB430005D3E9 /* countdown-timer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "countdown-timer-Bridging-Header.h"; sourceTree = "<group>"; };
-		1081E2802B6EBB430005D3E9 /* Sidebar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sidebar.swift; path = "../todo-list/countdown-clock/Sidebar.swift"; sourceTree = "<group>"; };
-		1081E2812B6EBB430005D3E9 /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSettings.swift; path = "../todo-list/countdown-clock/UserSettings.swift"; sourceTree = "<group>"; };
-		1081E2822B6EBB430005D3E9 /* NavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavBar.swift; path = "../todo-list/countdown-clock/NavBar.swift"; sourceTree = "<group>"; };
-		1081E2832B6EBB430005D3E9 /* Configurations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Configurations.swift; path = "../todo-list/countdown-clock/Configurations.swift"; sourceTree = "<group>"; };
-		1081E2842B6EBB430005D3E9 /* ClocksList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClocksList.swift; path = "../todo-list/countdown-clock/ClocksList.swift"; sourceTree = "<group>"; };
-		1081E2862B6EBB430005D3E9 /* countdown_clockApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = countdown_clockApp.swift; path = "../todo-list/countdown-clock/countdown_clockApp.swift"; sourceTree = "<group>"; };
-		1081E2882B6EBB440005D3E9 /* HomeWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeWrapper.swift; path = "../todo-list/countdown-clock/HomeWrapper.swift"; sourceTree = "<group>"; };
-		1081E28A2B6EBB440005D3E9 /* Clock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Clock.swift; path = "../todo-list/countdown-clock/Clock.swift"; sourceTree = "<group>"; };
-		1081E28B2B6EBB440005D3E9 /* ClockListManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClockListManager.swift; path = "../todo-list/countdown-clock/ClockListManager.swift"; sourceTree = "<group>"; };
 		1081E2982B6ED20C0005D3E9 /* ClockInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockInputView.swift; sourceTree = "<group>"; };
 		1081E29A2B7075400005D3E9 /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
 		1081E29C2B72748E0005D3E9 /* ClockDeleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockDeleteView.swift; sourceTree = "<group>"; };
@@ -84,25 +84,6 @@
 		1081E2642B6EBA180005D3E9 = {
 			isa = PBXGroup;
 			children = (
-				1018A8C02B8FD8DE00204A83 /* AlertSheet.swift */,
-				1005F06D2B8B2BC1001632FC /* DatePicker.swift */,
-				1005F06B2B8A4B1A001632FC /* DurationInputView.swift */,
-				1005F0672B871D15001632FC /* Home.swift */,
-				1005F05D2B855CF3001632FC /* ClockToTextConverter.swift */,
-				1081E2A02B7D121C0005D3E9 /* ClockHeader.swift */,
-				1081E29E2B753BD40005D3E9 /* ClockEditAddView.swift */,
-				1081E29C2B72748E0005D3E9 /* ClockDeleteView.swift */,
-				1081E29A2B7075400005D3E9 /* Stopwatch.swift */,
-				1081E2982B6ED20C0005D3E9 /* ClockInputView.swift */,
-				1081E28A2B6EBB440005D3E9 /* Clock.swift */,
-				1081E28B2B6EBB440005D3E9 /* ClockListManager.swift */,
-				1081E2842B6EBB430005D3E9 /* ClocksList.swift */,
-				1081E2832B6EBB430005D3E9 /* Configurations.swift */,
-				1081E2862B6EBB430005D3E9 /* countdown_clockApp.swift */,
-				1081E2822B6EBB430005D3E9 /* NavBar.swift */,
-				1081E2882B6EBB440005D3E9 /* HomeWrapper.swift */,
-				1081E2802B6EBB430005D3E9 /* Sidebar.swift */,
-				1081E2812B6EBB430005D3E9 /* UserSettings.swift */,
 				1081E26F2B6EBA180005D3E9 /* countdown-timer */,
 				1081E26E2B6EBA180005D3E9 /* Products */,
 				1081E27F2B6EBB430005D3E9 /* countdown-timer-Bridging-Header.h */,
@@ -120,6 +101,25 @@
 		1081E26F2B6EBA180005D3E9 /* countdown-timer */ = {
 			isa = PBXGroup;
 			children = (
+				1018A8E62B9107D600204A83 /* UserSettings.swift */,
+				1018A8E02B9106FC00204A83 /* countdown_clockApp.swift */,
+				1018A8E42B9107CB00204A83 /* Sidebar.swift */,
+				1018A8DC2B9106F900204A83 /* ClocksList.swift */,
+				1018A8DE2B9106FB00204A83 /* Configurations.swift */,
+				1081E2982B6ED20C0005D3E9 /* ClockInputView.swift */,
+				1081E29E2B753BD40005D3E9 /* ClockEditAddView.swift */,
+				1081E29A2B7075400005D3E9 /* Stopwatch.swift */,
+				1018A8CA2B9106D200204A83 /* NavBar.swift */,
+				1018A8D02B9106D900204A83 /* ClockListManager.swift */,
+				1081E2A02B7D121C0005D3E9 /* ClockHeader.swift */,
+				1018A8D22B9106DC00204A83 /* Clock.swift */,
+				1018A8C42B9106BF00204A83 /* HomeWrapper.swift */,
+				1081E29C2B72748E0005D3E9 /* ClockDeleteView.swift */,
+				1005F05D2B855CF3001632FC /* ClockToTextConverter.swift */,
+				1005F0672B871D15001632FC /* Home.swift */,
+				1018A8C02B8FD8DE00204A83 /* AlertSheet.swift */,
+				1005F06D2B8B2BC1001632FC /* DatePicker.swift */,
+				1005F06B2B8A4B1A001632FC /* DurationInputView.swift */,
 				1005F0622B871727001632FC /* Fonts */,
 				1005F0602B8715A4001632FC /* Info.plist */,
 				1081E2742B6EBA1A0005D3E9 /* Assets.xcassets */,
@@ -213,25 +213,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1081E2972B6EBB440005D3E9 /* ClockListManager.swift in Sources */,
+				1018A8E12B9106FD00204A83 /* countdown_clockApp.swift in Sources */,
+				1018A8DF2B9106FB00204A83 /* Configurations.swift in Sources */,
 				1005F05E2B855CF3001632FC /* ClockToTextConverter.swift in Sources */,
 				1005F06C2B8A4B1A001632FC /* DurationInputView.swift in Sources */,
-				1081E28C2B6EBB440005D3E9 /* Sidebar.swift in Sources */,
 				1081E2992B6ED20D0005D3E9 /* ClockInputView.swift in Sources */,
-				1081E2922B6EBB440005D3E9 /* countdown_clockApp.swift in Sources */,
-				1081E28D2B6EBB440005D3E9 /* UserSettings.swift in Sources */,
 				1081E29D2B72748E0005D3E9 /* ClockDeleteView.swift in Sources */,
 				1081E2A12B7D121C0005D3E9 /* ClockHeader.swift in Sources */,
-				1081E2902B6EBB440005D3E9 /* ClocksList.swift in Sources */,
-				1081E28F2B6EBB440005D3E9 /* Configurations.swift in Sources */,
+				1018A8C52B9106BF00204A83 /* HomeWrapper.swift in Sources */,
+				1018A8E52B9107CB00204A83 /* Sidebar.swift in Sources */,
+				1018A8DD2B9106F900204A83 /* ClocksList.swift in Sources */,
+				1018A8CB2B9106D200204A83 /* NavBar.swift in Sources */,
+				1018A8D12B9106D900204A83 /* ClockListManager.swift in Sources */,
+				1018A8E72B9107D600204A83 /* UserSettings.swift in Sources */,
 				1081E29B2B7075400005D3E9 /* Stopwatch.swift in Sources */,
-				1081E28E2B6EBB440005D3E9 /* NavBar.swift in Sources */,
-				1081E2942B6EBB440005D3E9 /* HomeWrapper.swift in Sources */,
-				1081E2962B6EBB440005D3E9 /* Clock.swift in Sources */,
 				1018A8C12B8FD8DE00204A83 /* AlertSheet.swift in Sources */,
 				1005F0682B871D15001632FC /* Home.swift in Sources */,
 				1081E29F2B753BD40005D3E9 /* ClockEditAddView.swift in Sources */,
 				1005F06E2B8B2BC1001632FC /* DatePicker.swift in Sources */,
+				1018A8D32B9106DC00204A83 /* Clock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

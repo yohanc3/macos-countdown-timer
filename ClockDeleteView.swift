@@ -26,25 +26,36 @@ struct ClockDeleteView: View {
     
     var body: some View {
         
-        VStack(alignment: .leading, spacing: 20){
+        VStack{
             
-            Text(currentClockName).font(.headline)
-            
-            Text("Type ") +
-            Text("del ").bold().italic() +
-            Text("to ") +
-            Text("permanently delete ").bold().italic() +
-            Text("this clock ")
-
-            TextField("del",
-                      text: $deleteConfirmation)
-            .padding()
-            .foregroundStyle(deleteConfirmationBool ? Color.blue : Color.red)
-            .multilineTextAlignment(.center)
-            .onChange(of: deleteConfirmation){
-                if deleteConfirmation == "del" {deleteConfirmationBool = true}
-                else {deleteConfirmationBool = false};
+            HStack(){
+                Text("Delete clock: \(currentClockName)")
+                    .foregroundStyle(.white)
+                    .font(.largeTitle)
             }
+            .padding(EdgeInsets(top: 50, leading: 0, bottom: 25, trailing: 0))
+            
+            VStack {
+                
+                TextField("del", text: $deleteConfirmation)
+                .padding()
+                .foregroundStyle(deleteConfirmationBool ? Color.blue : Color.red)
+                .multilineTextAlignment(.center)
+                .onChange(of: deleteConfirmation){
+                    if deleteConfirmation == "del" {deleteConfirmationBool = true}
+                    else {deleteConfirmationBool = false};
+                }
+                
+                Text("Type ").font(.footnote) +
+                Text("del ").bold().italic().font(.footnote) +
+                Text("to ").font(.footnote) +
+                Text("permanently delete ").bold().italic().font(.footnote) +
+                Text("this clock ").font(.footnote)
+                
+            }
+            .padding(EdgeInsets(top: 0, leading: 0, bottom: 25, trailing: 0))
+
+
             
             HStack(spacing: 20){
                 Button("Delete"){
@@ -54,6 +65,9 @@ struct ClockDeleteView: View {
                     }
                 }
                 .padding()
+                
+                Spacer()
+                
                 Button("Exit"){
                     isDeleteSheetPresented = false;
                 }
@@ -63,7 +77,8 @@ struct ClockDeleteView: View {
         
             
         }
-        .padding(20)
+        .frame(width: 500, height: 300)
+        .padding(EdgeInsets(top: 0, leading: 100, bottom: 50, trailing: 100))
         
     }
     

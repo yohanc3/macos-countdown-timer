@@ -11,6 +11,8 @@ import SwiftData
 
 struct ClockEditAddView: View {
     
+    @Query var clocks: [Clock];
+    
     @Bindable var clock: Clock
     
     @Binding var currentClockName: String;
@@ -27,48 +29,114 @@ struct ClockEditAddView: View {
     @State var newClockName: String = "";
     @State var isDurationInputSelected = true;
     @State var selectedDate = Date();
-    @State var selectedTime = Date();
+    
+    @State var isClockNameUnique = true;
+    @State var isTimeValid = false;
     
     var body: some View {
         
         VStack{
             
             HStack(){
-                Text("\( isEdit ? currentClockName : "Add new clock")")
+                Text("\( isEdit ? "Edit clock: \(currentClockName)" : "Add new clock")")
                     .foregroundStyle(.white)
                     .font(.largeTitle)
             }
-                .padding(EdgeInsets(top: 30, leading: 0, bottom: 30, trailing: 0))
+                .padding(EdgeInsets(top: 50, leading: 0, bottom: 25, trailing: 0))
             
             HStack{
                 
-                TextField("Clock name", text: isEdit ? $clock.name : $newClockName)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .frame(width: 300)
-                
-                Picker("", selection: $isDurationInputSelected) {
-                    Text("Duration").tag(true)
-                    Text("Date Selection").tag(false)
+                VStack{
+                    
+                    HStack {
+                        
+                        TextField("\( isEdit ? clock.name : "New clock name")", text: $newClockName)
+                            .onChange(of: newClockName){
+                                
+                            if clocks.contains(where: {$0.name == newClockName && $0.id != clock.id}){
+                                isClockNameUnique = false;
+                            } else {
+                                isClockNameUnique = true;
+                            }
+                            
+                        }
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .frame(width: 300)
+                        
+                        Picker("", selection: $isDurationInputSelected) {
+                            Text("Duration").tag(true)
+                            Text("Date Selection").tag(false)
+                        }
+                    }
+                    
+                    if !isClockNameUnique || (newClockName == "" && isEdit == false){
+                        
+                        HStack {
+                            Image(systemName: "exclamationmark.circle")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 25, height: 15)
+                            
+                            Text("\(!isClockNameUnique ? "Clock named '\(newClockName)' already exists." : isEdit == false && newClockName == "" ? "New clock name cannot be empty" : "")")
+                                .multilineTextAlignment(.leading)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .layoutPriority(1)
+                                .font(.footnote)
+                            Spacer();
+                            
+                        }.padding(EdgeInsets(top: 5, leading: 0, bottom: 0, trailing: 0))
+                        
+                    }
                 }
-                .pickerStyle(MenuPickerStyle())
                 .fixedSize()
                 
                 }
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
             
             if isDurationInputSelected {
                 
-                DurationInputView(clockDays: self.$clockDays, clockHours: self.$clockHours, clockMinutes: self.$clockMinutes, clockSeconds: self.$clockSeconds)
+                DurationInputView(clockDays: self.$clockDays, clockHours: self.$clockHours, clockMinutes: self.$clockMinutes, clockSeconds: self.$clockSeconds, isTimeValid: self.$isTimeValid)
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 30, trailing: 0))
+                .onDisappear{
+                    isTimeValid = false;
+                }
+
             } else {
                 
                 HStack{
-                    MyDatePicker(selection: $selectedDate)
-                        .padding()
-                        .fixedSize()
+                    VStack {
+                        MyDatePicker(selection: $selectedDate)
+                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                            .fixedSize()
+                            .onChange(of: selectedDate, {
+                                if Int(selectedDate.timeIntervalSinceNow) <= 0 {
+                                    isTimeValid = false;
+                                } else {
+                                    isTimeValid = true;
+                                }
+                            })
+
+                        HStack {
+                            if isTimeValid == false || Int(selectedDate.timeIntervalSinceNow) <= 0 {
+                                Image(systemName: "exclamationmark.circle")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 25, height: 15)
+                                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                                
+                                Text("Picked date can not be less than current date.")
+                                    .multilineTextAlignment(.center)
+                                    .fixedSize(horizontal: false, vertical: true)
+                                    .layoutPriority(1)
+                                    .font(.footnote)
+                            }
+                        }
+
+                    }
+
                 }
-                
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
             }
+
             
             HStack{
                 Button(isEdit ? "Edit clock" : "Add clock"){
@@ -93,11 +161,18 @@ struct ClockEditAddView: View {
                     } else {
                         
                         newRemainingTime = Int(selectedDate.timeIntervalSinceNow)
+                        if newRemainingTime < 0 {
+                            isTimeValid = false;
+                        }
                         
                     }
                     
-                    editAddClock(newClockName, newRemainingTime);
-                    isSheetPresented = false;
+                    if isClockNameUnique == true && isTimeValid == true {
+                        if isEdit && newClockName == "" {newClockName = currentClockName}
+                        editAddClock(newClockName, newRemainingTime);
+                        isSheetPresented = false;
+                    }
+                    
 
                 }
                 

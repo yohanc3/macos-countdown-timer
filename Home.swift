@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct Home: View {
     
+    @Query var clocks: [Clock];
+    
     @Binding var currentClock: Clock?;
     @Binding var currentClockId: String;
-    @Binding var clockListID: UUID;
+    @Binding var clockListId: UUID;
     
     @State var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State var isTimerRunning: Bool = true;
@@ -27,6 +30,7 @@ struct Home: View {
             
             if let currentClock = self.currentClock, !currentClock.isCountOver{
                 ZStack(){
+                    
                     Text("\(formattedTime)")
                         .font(Font.custom("Digital-7", size: 285))
                         .foregroundStyle(Color("Red"))
@@ -77,17 +81,29 @@ struct Home: View {
                                 self.formattedTime = "00:00:00:00"
                             }
                         }
-                        .id(clockListID)
+                        .id(clockListId)
                 }
                
 
             } else {
-                Text("No timer has been selected")
-                    .onChange(of: currentClockId){
-                        if let currentClock = self.currentClock {
-                            formattedTimer = ClockToTextConverter(clock: currentClock);
+                
+                ZStack{
+                    Text("\(clocks.isEmpty ? "No timer has been created" : "No timer has been selected")")
+                        .font(Font.custom("Digital-7", size: 155))
+                        .foregroundStyle(Color("Red"))
+                        .multilineTextAlignment(.center)
+                        .blur(radius: 8.0)
+                    Text("\(clocks.isEmpty ? "No timer has been created" : "No timer has been selected")")
+                        .font(Font.custom("Digital-7", size: 155))
+                        .foregroundStyle(Color("LightRed"))
+                        .multilineTextAlignment(.center)
+                        .onChange(of: currentClockId){
+                            if let currentClock = self.currentClock {
+                                formattedTimer = ClockToTextConverter(clock: currentClock);
+                            }
                         }
-                    }
+                }
+
             }
         }
         .padding()

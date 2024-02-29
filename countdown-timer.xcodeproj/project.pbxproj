@@ -12,6 +12,7 @@
 		1005F06A2B871EE7001632FC /* 14-Segment-LED-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1005F0692B871EE7001632FC /* 14-Segment-LED-Regular.ttf */; };
 		1005F06C2B8A4B1A001632FC /* DurationInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1005F06B2B8A4B1A001632FC /* DurationInputView.swift */; };
 		1005F06E2B8B2BC1001632FC /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1005F06D2B8B2BC1001632FC /* DatePicker.swift */; };
+		1018A8C12B8FD8DE00204A83 /* AlertSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1018A8C02B8FD8DE00204A83 /* AlertSheet.swift */; };
 		1081E2752B6EBA1A0005D3E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1081E2742B6EBA1A0005D3E9 /* Assets.xcassets */; };
 		1081E2782B6EBA1A0005D3E9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1081E2772B6EBA1A0005D3E9 /* Preview Assets.xcassets */; };
 		1081E28C2B6EBB440005D3E9 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1081E2802B6EBB430005D3E9 /* Sidebar.swift */; };
@@ -38,6 +39,7 @@
 		1005F0692B871EE7001632FC /* 14-Segment-LED-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "14-Segment-LED-Regular.ttf"; sourceTree = "<group>"; };
 		1005F06B2B8A4B1A001632FC /* DurationInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationInputView.swift; sourceTree = "<group>"; };
 		1005F06D2B8B2BC1001632FC /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
+		1018A8C02B8FD8DE00204A83 /* AlertSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSheet.swift; sourceTree = "<group>"; };
 		1081E26D2B6EBA180005D3E9 /* countdown-timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "countdown-timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1081E2742B6EBA1A0005D3E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1081E2772B6EBA1A0005D3E9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 		1081E2642B6EBA180005D3E9 = {
 			isa = PBXGroup;
 			children = (
+				1018A8C02B8FD8DE00204A83 /* AlertSheet.swift */,
 				1005F06D2B8B2BC1001632FC /* DatePicker.swift */,
 				1005F06B2B8A4B1A001632FC /* DurationInputView.swift */,
 				1005F0672B871D15001632FC /* Home.swift */,
@@ -150,6 +153,8 @@
 			dependencies = (
 			);
 			name = "countdown-timer";
+			packageProductDependencies = (
+			);
 			productName = "countdown-timer";
 			productReference = 1081E26D2B6EBA180005D3E9 /* countdown-timer.app */;
 			productType = "com.apple.product-type.application";
@@ -179,6 +184,8 @@
 				Base,
 			);
 			mainGroup = 1081E2642B6EBA180005D3E9;
+			packageReferences = (
+			);
 			productRefGroup = 1081E26E2B6EBA180005D3E9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -221,6 +228,7 @@
 				1081E28E2B6EBB440005D3E9 /* NavBar.swift in Sources */,
 				1081E2942B6EBB440005D3E9 /* HomeWrapper.swift in Sources */,
 				1081E2962B6EBB440005D3E9 /* Clock.swift in Sources */,
+				1018A8C12B8FD8DE00204A83 /* AlertSheet.swift in Sources */,
 				1005F0682B871D15001632FC /* Home.swift in Sources */,
 				1081E29F2B753BD40005D3E9 /* ClockEditAddView.swift in Sources */,
 				1005F06E2B8B2BC1001632FC /* DatePicker.swift in Sources */,

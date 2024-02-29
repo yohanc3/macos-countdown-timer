@@ -8,11 +8,42 @@
 import SwiftUI
 
 struct AlertSheet: View {
+    
+    @Binding var isSheetPresented: Bool;
+    @Binding var alertTitle: String;
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+        
+        VStack{
+            
+            Spacer();
+            
+            Image(systemName: "exclamationmark.triangle.fill")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 45, height: 40)
+            
+            Spacer();
+            
+            Text(alertTitle)
 
-#Preview {
-    AlertSheet()
+            Spacer();
+            
+            Button(action: {
+                isSheetPresented = false;
+
+            }){
+                Text("OK")
+                    .frame(width: 150)
+            }
+            
+            Spacer();
+            
+        }
+        .frame(width: 300, height: 200)
+        .padding()
+        
+
+    }
+
 }

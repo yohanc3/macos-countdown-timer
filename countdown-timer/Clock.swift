@@ -15,7 +15,10 @@ class Clock {
     var name: String;
     var durationInSeconds: Int;
     var objectiveDate: Date;
-    var isCountOver: Bool;
+    var isCountOver: Bool  {
+        get {return remainingTime > 0}
+        set{}
+    }
     var remainingTime: Int {
         get {
             let remainingTime = Int(objectiveDate.timeIntervalSinceNow);

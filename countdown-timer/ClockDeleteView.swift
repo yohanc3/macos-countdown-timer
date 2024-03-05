@@ -16,9 +16,11 @@ struct ClockDeleteView: View {
     @State var deleteConfirmation: String = "";
     @State var deleteConfirmationBool: Bool = false;
     
-    @Binding var currentClock: Clock?;
+    var currentClock: Clock;
     @Binding var currentClockName: String;
     @Binding var isDeleteSheetPresented: Bool;
+    
+    @Binding var isClockOverSheetPresented: Bool;
     
     @Query var clocks: [Clock]
     
@@ -59,9 +61,10 @@ struct ClockDeleteView: View {
             
             HStack(spacing: 20){
                 Button("Delete"){
-                    if let clock = currentClock, deleteConfirmationBool {
-                        deleteClock(clock)
+                    if deleteConfirmationBool {
+                        deleteClock(currentClock)
                         isDeleteSheetPresented = false;
+                        isClockOverSheetPresented = false;
                     }
                 }
                 .padding()

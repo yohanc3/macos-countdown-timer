@@ -21,6 +21,8 @@ struct ClockEditAddView: View {
     
     var editAddClock: (String, Int) -> Void;
     
+    @Binding var isClockOverSheetPresented: Bool;
+    
     @State private var clockDays: String = "";
     @State private var clockHours: String = "";
     @State private var clockMinutes: String = "";
@@ -171,6 +173,7 @@ struct ClockEditAddView: View {
                         if isEdit && newClockName == "" {newClockName = currentClockName}
                         editAddClock(newClockName, newRemainingTime);
                         isSheetPresented = false;
+                        isClockOverSheetPresented = false;
                     }
                     
 

@@ -14,6 +14,8 @@ struct ClockListManager: View {
     @State private var isAddSheetPresented: Bool = false;
     @State private var isEditSheetPresented: Bool = false;
     
+    @State var isClockOverSheetPresented = false;
+    
     @State private var fakeClock: Clock = Clock(name: "", durationInSeconds: 0)
     
     @Binding var currentClockName: String;
@@ -47,7 +49,7 @@ struct ClockListManager: View {
                 .frame(width: geometry.size.width / 3)
                 .sheet(isPresented: self.$isEditSheetPresented){
                     if let currentClock = self.currentClock {
-                        ClockEditAddView(clock: currentClock, currentClockName: self.$currentClockName, isSheetPresented: self.$isEditSheetPresented, isEdit: $isEditSheetPresented, editAddClock: self.editClock)
+                        ClockEditAddView(clock: currentClock, currentClockName: self.$currentClockName, isSheetPresented: self.$isEditSheetPresented, isEdit: $isEditSheetPresented, editAddClock: self.editClock, isClockOverSheetPresented: self.$isClockOverSheetPresented)
                     }
                 }
                 
@@ -65,7 +67,7 @@ struct ClockListManager: View {
                 .frame(width: geometry.size.width / 3)
                 .sheet(isPresented: self.$isAddSheetPresented){
                     if isEditSheetPresented == false {
-                        ClockEditAddView(clock: fakeClock, currentClockName: self.$currentClockName, isSheetPresented: self.$isAddSheetPresented, isEdit: $isEditSheetPresented, editAddClock: self.addClock)
+                        ClockEditAddView(clock: fakeClock, currentClockName: self.$currentClockName, isSheetPresented: self.$isAddSheetPresented, isEdit: $isEditSheetPresented, editAddClock: self.addClock, isClockOverSheetPresented: self.$isClockOverSheetPresented)
                     }
                 }
                     
@@ -89,8 +91,8 @@ struct ClockListManager: View {
                     }
                     .frame(width: geometry.size.width / 3)
                     .sheet(isPresented: self.$isDeleteSheetPresented){
-                        if self.currentClock != nil {
-                            ClockDeleteView(currentClock: self.$currentClock, currentClockName: self.$currentClockName, isDeleteSheetPresented: self.$isDeleteSheetPresented, deleteClock: self.deleteClock)
+                        if let clock = self.currentClock, clock != nil {
+                            ClockDeleteView(currentClock: clock, currentClockName: self.$currentClockName, isDeleteSheetPresented: self.$isDeleteSheetPresented, isClockOverSheetPresented: self.$isClockOverSheetPresented, deleteClock: self.deleteClock)
                         }
                 }
             }

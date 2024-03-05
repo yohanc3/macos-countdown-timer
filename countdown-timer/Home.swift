@@ -16,6 +16,10 @@ struct Home: View {
     @Binding var currentClockId: String;
     @Binding var clockListId: UUID;
     
+    var addClock: (String, Int) -> Void;
+    var deleteClock: (Clock) -> Void;
+    var editClock: (String, Int) -> Void;
+    
     @State var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State var isTimerRunning: Bool = true;
     @State var isClockOverSheetPresented: Bool = false;
@@ -28,7 +32,7 @@ struct Home: View {
             
         VStack(spacing: 20) {
             
-            if let currentClock = self.currentClock, !currentClock.isCountOver{
+            if let currentClock = self.currentClock{
                 ZStack(){
                     
                     Text("\(formattedTime)")
@@ -83,9 +87,10 @@ struct Home: View {
                         }
                         .id(clockListId)
                 }
-               
 
-            } else {
+            }
+            
+            else {
                 
                 ZStack{
                     Text("\(clocks.isEmpty ? "No timer has been created" : "No timer has been selected")")
@@ -106,6 +111,19 @@ struct Home: View {
 
             }
         }
+        .onAppear{
+            if let currentClock = self.currentClock {
+                self.isClockOverSheetPresented = currentClock.remainingTime > 0 ? true : false;
+            }
+        }
+        //Move this to ClockListManager
+        .sheet(isPresented: self.$isClockOverSheetPresented, content: {
+            if let currentClock = self.currentClock {
+                ClockOverSheet(isClockRecapitulationPresented: self.$isClockOverSheetPresented, clock: currentClock, addClock: self.addClock, deleteClock: self.deleteClock, editClock: self.editClock)
+            }
+            
+
+        })
         .padding()
     }
     

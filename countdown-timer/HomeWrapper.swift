@@ -24,14 +24,16 @@ struct HomeWrapper: View {
     @State var isAlertPresent: Bool = false;
     @State var alertTitle: String = "";
     
+    @State var isCurrentClockOver: Bool = false;
+    
     var body: some View {
         HStack(spacing: 0){
-            Home(currentClock: self.$currentClock, currentClockId: self.$currentClockId, clockListId: self.$clockListId)
+            Home(currentClock: self.$currentClock, currentClockId: self.$currentClockId, clockListId: self.$clockListId, addClock: self.addClock, deleteClock: self.deleteClock, editClock: self.editClock)
                 .frame(width: (settings.screenSizeWidth * 0.90), height: settings.idealHeight)
                 .onAppear{
                     currentClock = clocks.first(where: {$0.isCurrentClock == true})
+                    isCurrentClockOver = currentClock?.isCountOver ?? false;
                 }
-
             
             Divider()
                 .overlay(Color("Divider"))
